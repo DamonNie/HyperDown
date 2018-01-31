@@ -298,7 +298,7 @@ class Parser
 
         // TeX 或 LaTeX 数学公式
         $text = preg_replace_callback(
-            "/(\\\${1,2})(.+)\\1/",
+            "/(\\\${1,2})(.+?)\\1/",
             function ($matches) use ($self) {
                 // 表达式中间的字符应该都是单字节
                 if (strlen($matches[2]) > mb_strlen($matches[2])) {
